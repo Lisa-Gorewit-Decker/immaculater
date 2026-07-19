@@ -1,0 +1,7 @@
+- name: Upload coverage report
+  if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+  uses: actions/upload-code-coverage@v1
+  with:
+    file: COVERAGE-FILE-PATH.xml
+    language: LANGUAGE
+    label: LABEL

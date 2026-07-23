@@ -1,4 +1,4 @@
-certifi>=2024.07.04
+certifi>=2026.7.22
 chardet==3.0.4
 idna>=3.18
 python-gflags==3.1.1

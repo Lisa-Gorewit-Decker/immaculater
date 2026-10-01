@@ -253,8 +253,8 @@ Wouldn't it be nice if we had the following:
 - Login with Google/Facebook
 
 ## Copyright
-
-Copyright 2017 David L. Chandler
+&copy; 2026 Lisa M. Gorewit 
+&copy; 2017 David L. Chandler
 
 See the LICENSE file in this directory.
 

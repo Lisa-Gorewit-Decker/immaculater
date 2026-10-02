@@ -17,7 +17,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '21 7 * * 5'
+    - cron: '26 18 * * 4'
 
 jobs:
   analyze:
@@ -44,6 +44,8 @@ jobs:
       matrix:
         include:
         - language: actions
+          build-mode: none
+        - language: javascript-typescript
           build-mode: none
         - language: python
           build-mode: none

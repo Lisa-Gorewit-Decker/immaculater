@@ -1385,8 +1385,8 @@ def api(request):
                          'printed': results['printed'],
                          'view': results['view']})
   except immaculater.Error as error:
-    _debug_log(u'api command failed: %s' % unicode(error))
-return JsonResponse({'error': 'Command failed. Please try again.', 'immaculater_error': 'Command failed. Please try again.'}, status=422)
+    _debug_log(u'api immaculater.Error: %s' % unicode(error))
+    return JsonResponse({'immaculater_error': u'Unable to process commands'}, status=422)
 
 
 def _slackapi(request):
@@ -1408,7 +1408,7 @@ def _slackapi(request):
                         content_type="text/plain")
   except immaculater.Error as error:
     _debug_log(u'we have an error: %s' % unicode(error))
-    return HttpResponse(u'Command failed. Please try again.', content_type="text/plain")
+    return HttpResponse(u'An internal error has occurred.', content_type="text/plain")
 
 
 @never_cache
